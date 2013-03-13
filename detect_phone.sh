@@ -11,8 +11,8 @@ SLEEP=5
 ME=`whoami`
 while true
 do	# Run only if screen is locked
-	PID=`pgrep -u $ME $LOCKPRG | head -1`
-	if [ .$PID != . ]; then
+	STATE=`LANG=en_US.utf8 gnome-screensaver-command -q 2>/dev/null`
+	if (echo $STATE | grep " active$" &>/dev/null); then
 		# Ping the phone (needs sudo permissions
 		# chmod u+s /usr/bin/l2ping
 		l2ping -t 5 -c 1 $BTHW >/dev/null 2>/dev/null
