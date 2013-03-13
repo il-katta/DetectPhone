@@ -4,7 +4,7 @@
 # date: 6 Feb 2012
 
 BTHW="xx:xx:xx:xx:xx:xx"  # Enter your Phone Bluetooth hardware address
-LOCKPRG="kscreenlocker"		# Screen saver program
+UNLOCK_CMD="gnome-screensaver-command -d"
 SLEEP=5
 
 ME=`whoami`
@@ -18,7 +18,7 @@ do	# Run only if screen is locked
 		RC=$?
 		if [ $RC = 0 ]; then
 			# Phone present...
-			kill $PID
+			$UNLOCK_CMD
 			xset dpms force on
 		fi
 	fi
