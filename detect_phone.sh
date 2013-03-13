@@ -4,6 +4,7 @@
 # date: 6 Feb 2012
 
 BTHW="xx:xx:xx:xx:xx:xx"  # Enter your Phone Bluetooth hardware address
+LOCKPRG="gnome-screensaver"
 UNLOCK_CMD="gnome-screensaver-command -d"
 SLEEP=5
 
