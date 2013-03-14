@@ -14,7 +14,7 @@ ME=`whoami`
 case "$DESKTOP" in
 	"gnome" | "GNOME")
 		UNLOCK_CMD="gnome-screensaver-command -d"
-		STATE_CMD="gnome-screensaver-command -q | grep \" active$\""
+		STATE_CMD='gnome-screensaver-command -q | grep " active$"'
 		export LC_ALL="en_US.utf-8"
 		;;
 	"kde" | "KDE" )
