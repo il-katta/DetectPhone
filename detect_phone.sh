@@ -29,7 +29,7 @@ esac
 
 while true
 do	# Run only if screen is locked
-	if ( $STATE_CMD &>/dev/null ); then
+	if ( eval $STATE_CMD &>/dev/null ); then
 		# Ping the phone (needs sudo permissions
 		# chmod u+s /usr/bin/l2ping
 		l2ping -t 5 -c 1 $BTHW >/dev/null 2>/dev/null
